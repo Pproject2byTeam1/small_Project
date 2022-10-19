@@ -18,7 +18,7 @@
     <input type="date" value="" max="2022-10-19" id="client_date"><br><br>
 
 <table class="table caption-primary">
-  <caption>List of users</caption>
+  <caption id="movie_date"></caption>
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -152,6 +152,7 @@
             }
             //document.getElementById("1_movieNm").innerHTML = data.boxOfficeResult.dailyBoxOfficeList[4].movieNm;
             
+            document.getElementById("movie_date").innerHTML = data.boxOfficeResult.showRange;
         });
 
     });
