@@ -139,10 +139,13 @@
             
 
             for(let index=0; index<10; index++){
-
+            
+            //매출액 반점 넣기
             let money = data.boxOfficeResult.dailyBoxOfficeList[index].salesAmt;
             let result = money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
+
+            // 영화제목 개봉날짜 매출액 기입
             document.getElementById(index+1+"_movieNm").innerHTML = data.boxOfficeResult.dailyBoxOfficeList[index].movieNm;
             document.getElementById(index+1+"_openDt").innerHTML = data.boxOfficeResult.dailyBoxOfficeList[index].openDt;
             document.getElementById(index+1+"_salesAmt").innerHTML = result;
